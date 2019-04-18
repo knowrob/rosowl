@@ -1,0 +1,1287 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ease-crc.org/ont/ROS.owl#"
+     xml:base="http://www.ease-crc.org/ont/ROS.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:ros="http://www.ease-crc.org/ont/ROS.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:EASE="http://www.ease.org/ont/EASE.owl#">
+    <owl:Ontology rdf:about="http://www.ease-crc.org/ont/ROS.owl">
+        <owl:imports rdf:resource="package://ease_ontology/owl/EASE.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE.owl#isAnsweredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/EASE.owl#isAnsweredBy"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#concretelyImplements -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#concretelyImplements">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#concretelyExpresses"/>
+        <rdfs:label>concretely implements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasPrimitiveType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasPrimitiveType">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+        <owl:inverseOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#isPrimitiveTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:label>has primitive type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasRegionMapping -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasRegionMapping">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/ROS.owl#RegionMapping"/>
+        <rdfs:label>has region mapping</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasRequest -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasRequest">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceQuerying"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Message"/>
+        <rdfs:label>has request</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasRequestType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasRequestType">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceInterface"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+        <rdfs:label>has request type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasResponse -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasResponse">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceQuerying"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Message"/>
+        <rdfs:label>has response</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasResponseType -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasResponseType">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceInterface"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+        <rdfs:label>has response type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasSlotValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasSlotValue">
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#Message"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>has slot value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#isPrimitiveTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#isPrimitiveTypeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRegionFor"/>
+        <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:label>is primitive type of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#isProvidedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#isProvidedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
+        <owl:inverseOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#provides"/>
+        <rdfs:label>is provided by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#provides -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#provides">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstituent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE.owl#hasNameString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/EASE.owl#hasNameString"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasNodeName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasNodeName">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Node"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has node name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasNodeType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasNodeType">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+        <rdfs:label>has node type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasServiceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasServiceName">
+        <rdfs:subPropertyOf rdf:resource="http://www.ease-crc.org/ont/EASE.owl#hasNameString"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has service name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasSlotName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasSlotName">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has slot name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasTopicName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasTopicName">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+        <rdfs:label>has topic name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#hasTypePath -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/ROS.owl#hasTypePath">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has type path</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE-IO.owl#ComputationalAgent -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/EASE-IO.owl#ComputationalAgent"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE.owl#ActionExecutionPlan -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/EASE.owl#ActionExecutionPlan"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE.owl#Querying -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/EASE.owl#Querying"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE.owl#StatusFailure -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/EASE.owl#StatusOk -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/EASE.owl#StatusOk"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#Array -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#Array">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArraySlot -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArraySlot">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+        <rdfs:label>Array slot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRealizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Array"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Array type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#AsynchronousService -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#AsynchronousService">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Service"/>
+        <rdfs:comment>A &quot;ROS action server&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#DataSlot -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#DataSlot">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArraySlot"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#MessageSlot"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#PrimitiveSlot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasSlotName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A key-&apos;data structure&apos; pair within a data structure.</rdfs:comment>
+        <rdfs:label>Data slot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#MasterServer -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#MasterServer">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ParameterServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Master server</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#Message -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#Message">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The concrete realization of a TCP message in a physical memory region which is transmitted via the ROS communication protocol. Standard primitive types (integer, floating point, boolean, etc.) are supported, as are arrays of primitive types. Messages can include arbitrarily nested structures and arrays (much like C structs).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#MessageArray -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#MessageArray">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Array"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#MessageSlot -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#MessageSlot">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+        <rdfs:label>Message slot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#MessageType -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#MessageType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRealizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Message"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasTypePath"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Message type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#Node -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#Node">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MasterServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasNodeName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasNodeType"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ParameterServer -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#ParameterServer">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MasterServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Parameter server</rdfs:label>
+        <rdfs:label>The Parameter Server allows data to be stored by key in a central location. It is currently part of the Master.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#PrimitiveArray -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#PrimitiveArray">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Array"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#PrimitiveSlot -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#PrimitiveSlot">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#DataSlot"/>
+        <rdfs:label>Primitive slot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#PrimitiveType -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DataStructure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isRealizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Primitive type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#PrimitiveValue -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#PrimitiveValue">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Primitive value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#Publisher -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasTopicName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#QueryingFailure -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#QueryingFailure">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#CLIENT_NODE_CRASHED"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#MASTER_UNREACHABLE"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#MESSAGE_CRC_MISSMATCH"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#SERVICE_NODE_UNREACHABLE"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#UNGROUNDABLE_REQUEST"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#UNINTERPRETABLE_RESPONSE"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#QueryingOk -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#QueryingOk">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#AWAITING_RESPONSE"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#NO_SOLUTION_FOUND"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#SENDING_REQUEST"/>
+                    <rdf:Description rdf:about="http://www.ease-crc.org/ont/ROS.owl#SOLUTION_FOUND"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusOk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ROSQueryingExecution -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#ROSQueryingExecution">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE.owl#ActionExecutionPlan"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+                <owl:allValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExecutedIn"/>
+                        <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceQuerying"/>
+                    </owl:Restriction>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#RegionMapping -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#RegionMapping">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Maps a data value into a region.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#Service -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#Service">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#ComputationalAgent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#concretelyImplements"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#isProvidedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasServiceName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ServiceInterface -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#ServiceInterface">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Description"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isExpressedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#Code"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasRequestType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasResponseType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ease-crc.org/ont/ROS.owl#MessageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasTypePath"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Service interface</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ServiceQuerying -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#ServiceQuerying">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE.owl#Querying"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/EASE.owl#isAnsweredBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasRequest"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Message"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasResponse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Message"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParticipant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ServiceInterface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Service querying actions might have additional regions that are classified by parameters that are also classifying some slot of the request or response message.</rdfs:comment>
+        <rdfs:comment>todo: who asks the query?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#StatusSlot -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#StatusSlot">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveSlot"/>
+        <rdfs:comment>A slot whose assignment is a status code. Indiviudal status slots further define the mapping from ROS status codes to their OWL Region using hasRegionMapping.</rdfs:comment>
+        <rdfs:label>Status slot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#Subscriber -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#Subscriber">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/EASE-IO.owl#DigitalObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstituentOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ease-crc.org/ont/ROS.owl#hasTopicName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#SynchronousService -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/ROS.owl#SynchronousService">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/ROS.owl#Service"/>
+        <rdfs:comment>A &quot;ROS service&quot;.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#AWAITING_RESPONSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#AWAITING_RESPONSE">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusOk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_bool -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_bool">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#bool"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_duration -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_duration">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#duration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_float32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_float32">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#float32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_float64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_float64">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#float64"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_int16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_int16">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#int16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_int32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_int32">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#int32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_int64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_int64">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#int64"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_int8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_int8">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#int8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_string -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_string">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#string"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_time -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_time">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint16">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#uint16"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint32">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#uint32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint64">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#uint64"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#ArrayType_uint8">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#ArrayType"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/ROS.owl#uint8"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#CLIENT_NODE_CRASHED -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#CLIENT_NODE_CRASHED">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#MASTER_UNREACHABLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#MASTER_UNREACHABLE">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#MESSAGE_CRC_MISSMATCH -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#MESSAGE_CRC_MISSMATCH">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#NO_SOLUTION_FOUND -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#NO_SOLUTION_FOUND">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusOk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#SENDING_REQUEST -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#SENDING_REQUEST">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusOk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#SERVICE_NODE_UNREACHABLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#SERVICE_NODE_UNREACHABLE">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#SOLUTION_FOUND -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#SOLUTION_FOUND">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusOk"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#UNGROUNDABLE_REQUEST -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#UNGROUNDABLE_REQUEST">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#UNINTERPRETABLE_RESPONSE -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#UNINTERPRETABLE_RESPONSE">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE.owl#StatusFailure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#bool -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#bool">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#bool_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#bool_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#duration -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#duration">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#duration_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#duration_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#float32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#float32">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#float32_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#float32_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#float64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#float64">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#float64_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#float64_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int16">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int16_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int16_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int32">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int32_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int32_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int64">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int64_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int64_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int8">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#int8_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#int8_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#string -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#string">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#string_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#string_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#time -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#time">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#time_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#time_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint16">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint16_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint16_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint32">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint32_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint32_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint64">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint64_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint64_array"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint8">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/ROS.owl#PrimitiveType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/ROS.owl#uint8_array -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/ROS.owl#uint8_array"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>rosowl</name>
+  <version>1.0.0</version>
+  <description>
+     OWL message generation.
+  </description>
+
+  <maintainer email="danielb@uni-bremen.de">Daniel Beßler</maintainer>
+
+  <license>BSD</license>
+
+  <author email="danielb@uni-bremen.de">Daniel Beßler</author>
+
+  <buildtool_depend version_gte="0.5.78">catkin</buildtool_depend>
+
+  <run_depend>genowl</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend version_gte="1.10.3">rosgraph_msgs</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>common_msgs</run_depend>
+</package>
