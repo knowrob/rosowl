@@ -14,7 +14,7 @@
 
   <buildtool_depend version_gte="0.5.78">catkin</buildtool_depend>
 
-  <build_depend>genowl</run_depend>
+  <build_depend>genowl</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>roslib</build_depend>
   <build_depend>roscpp</build_depend>
