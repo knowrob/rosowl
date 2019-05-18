@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(rosowl)
 find_package(catkin REQUIRED genowl)
-catkin_package()
+catkin_package(
+  CATKIN_DEPENDS genowl
+)
 # catkin_python_setup()
 
 # install legacy infrastructure needed by rosbuild
